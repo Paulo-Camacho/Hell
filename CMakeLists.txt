@@ -3,19 +3,21 @@ project(un)
 
 set(CMAKE_CXX_STANDARD 14)
 
-# Specify the path to your GLFW installation
-# If you installed GLFW using `sudo make install`, it should be in /usr/local by default
+# Specify the path to your GLFW build
+set(GLFW_BUILD_PATH /home/paulo/glfw-3.4/build)
 
-# Find the GLFW package
-find_package(PkgConfig REQUIRED)
-pkg_search_module(GLFW REQUIRED glfw3)
-
-# Include directories
-include_directories(${GLFW_INCLUDE_DIRS})
+# Include directories for GLFW
+include_directories(${GLFW_BUILD_PATH}/include)
 include_directories(.)
 
 # Add the executable
 add_executable(un main.cpp main.h)
 
-# Link against GLFW
-target_link_libraries(un ${GLFW_LIBRARIES})
+# Link against GLFW library
+find_library(GLFW_LIBRARY glfw3 PATHS ${GLFW_BUILD_PATH}/src)
+
+if (GLFW_LIBRARY)
+    target_link_libraries(un ${GLFW_LIBRARY})
+else()
+    message(FATAL_ERROR "Could not find the GLFW library")
+endif()
