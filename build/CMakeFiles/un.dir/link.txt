@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/un.dir/main.cpp.o -o un  /home/paulo/glfw-3.4/build/src/libglfw3.a 
