@@ -10,7 +10,13 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "-I",
+                "/home/paulo/glfw-3.4/include",
+                "-L",
+                "/home/paulo/glfw-3.4/build/src",
+                "-lglfw3",
+                "-pthread"
             ],
             "options": {
                 "cwd": "${fileDirname}"

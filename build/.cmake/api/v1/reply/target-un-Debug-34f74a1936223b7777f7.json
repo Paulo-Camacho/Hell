@@ -32,7 +32,13 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 21,
+				"line" : 17,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 23,
 				"parent" : 0
 			},
 			{
@@ -55,7 +61,7 @@
 			"includes" : 
 			[
 				{
-					"backtrace" : 3,
+					"backtrace" : 4,
 					"path" : "/home/paulo/glfw-3.4/build/include"
 				}
 			],
@@ -89,6 +95,11 @@
 			},
 			{
 				"backtrace" : 2,
+				"fragment" : "-lglfw",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
 				"fragment" : "/home/paulo/glfw-3.4/build/src/libglfw3.a",
 				"role" : "libraries"
 			}

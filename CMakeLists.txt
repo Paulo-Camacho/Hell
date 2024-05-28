@@ -14,6 +14,8 @@ include_directories(${GLFW_BUILD_PATH}/include)
 # Add the executable
 add_executable(un main.cpp main.h)
 
+target_link_libraries(un glfw)
+
 # Link against GLFW library
 find_library(GLFW_LIBRARY glfw3 PATHS ${GLFW_BUILD_PATH})
 

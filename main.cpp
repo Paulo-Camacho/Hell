@@ -1,10 +1,25 @@
-//
-// Created by paulo on 5/27/24.
-//
-
-#include "main.h"
+#include <GLFW/glfw3.h>
 #include <iostream>
 
-int main() {
-    std::cout << "Hello, world";
+int main(int, char) {
+
+    GLFWwindow* window;
+
+    if (!glfwInit()) {
+        return -1;
+    }
+
+    window = glfwCreateWindow(500, 500, "Window!", NULL, NULL);
+
+    glfwMakeContextCurrent(window);
+
+    while(!glfwWindowShouldClose(window)) {
+
+        glfwPollEvents();
+
+        glfwSwapBuffers(window);
+    }
+
+    glfwTerminate;
+
 }
