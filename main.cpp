@@ -1,8 +1,10 @@
-#include<iostream>
-using namespace std;
+#include <vector>
+#include <iostream>
 
-int main(int argc, char* argv[])
-{
-    std::cout << "hello, world\n";
-    return 0;
+void ten(int& a) {a = 10;}
+
+int main(int argc, char* argv[]) {
+   int i = 12;
+   ten(i);
+   std::cout << i << std::endl;
 }
