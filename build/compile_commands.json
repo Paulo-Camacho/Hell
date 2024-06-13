@@ -1,8 +1,0 @@
-[
-{
-  "directory": "/home/paulo/data/code/un/build",
-  "command": "/usr/bin/g++  -I/home/paulo/glfw-3.4/build/include -g -std=gnu++17 -o CMakeFiles/un.dir/main.cpp.o -c /home/paulo/data/code/un/main.cpp",
-  "file": "/home/paulo/data/code/un/main.cpp",
-  "output": "CMakeFiles/un.dir/main.cpp.o"
-}
-]
